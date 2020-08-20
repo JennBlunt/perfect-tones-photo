@@ -1,0 +1,392 @@
+/* font-family: 'Comfortaa',
+cursive;
+font-family: 'Nunito',
+sans-serif;
+font-family: 'Roboto',
+sans-serif; */
+
+/*  General Settings */
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#maincontent {
+    height: 75vh;
+}
+
+.entry-meta,
+.entry-utility,
+#nav-below,
+.content h1,
+.home h1,
+.contact-form h1 {
+    display: none;
+}
+
+
+/* Nav */
+.menu {
+    font-size: 1.3rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    letter-spacing: 0.6rem;
+    list-style-type: none;
+}
+
+#menu-main-menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Home Page */
+
+.home img {
+    width: 100vw;
+    height: 75vh;
+    object-fit: cover;
+}
+
+
+/* About */
+
+
+.about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 20% 0% 20%;
+}
+
+.bio p {
+    width: 35vw;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1.8px;
+    line-height: 28px;
+}
+
+.about-image img {
+    padding: 10%;
+    height: 50vh;
+    width: auto;
+}
+
+
+
+/*  Galleries */
+
+.loop-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: 5% 2% 2% 0%; */
+    width: 100vw;
+}
+
+.loop-page article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+}
+
+.loop-page img {
+    height: auto;
+    width: 20vw;
+}
+
+/* LogIn */
+
+.post-password-required,
+.post-password-required .entry-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Nunito',
+        sans-serif;
+    font-weight: 200;
+}
+
+.entry-content p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry-content input {
+    width: 200px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/* Proofs page  */
+
+
+.envira-gallery-item-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+
+/* Single page  */
+
+
+
+/* Contact Page */
+
+.contact-form {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 5% 20% 0% 20%;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+}
+
+.contact-left p,
+.contact-right p {
+    font-size: 1.2rem;
+    letter-spacing: 0.18rem;
+    line-height: 1.7rem;
+    width: 25vw;
+}
+
+.wpcf7-submit {
+    width: 5vw;
+}
+
+input,
+textarea {
+    width: 25vw;
+    margin-top: 10px;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: rgb(125, 125, 125);
+    font-weight: 300;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+
+    p {
+        padding: 0px 3px 0px 3px;
+        margin: 10px;
+    }
+}
+
+
+.legal {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        font-size: 16px;
+
+    }
+
+    a {
+        font-style: italic;
+        text-transform: none;
+        color: rgb(165, 165, 165);
+    }
+}
+
+
+
+/*  ******************** RESPONSIVE STYLES ************************** */
+
+/* Phones: portrait and landscape */
+
+
+@media only screen and (max-width: 412px) and (orientation: portrait) {
+    .post-thumbnail img {
+        width: 100%;
+    }
+
+    .loop-page,
+    .entry-content {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-left p {
+        display: none;
+    }
+
+    .contact-right input,
+    textarea {
+        width: 220px;
+    }
+
+    .contact-right input {
+        height: 30px;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .bio p {
+        width: 100%;
+        margin-bottom: 100px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .portfolio-gallery {
+        margin-top: 80px;
+    }
+
+    .envira-gallery-image img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 570px) and (orientation: landscape) {
+    .post-thumbnail img {
+        width: 100%;
+    }
+
+    .loop-page,
+    .entry-content {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-left p {
+        display: none;
+    }
+
+    .contact-right input,
+    textarea {
+        width: 350px;
+    }
+
+    .contact-right input {
+        height: 30px;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .bio p {
+        width: 100%;
+        margin-bottom: 100px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+
+    footer {
+        height: auto;
+
+    }
+}
+
+/* Tablets: portrait and vertical */
+
+@media only screen and (min-width: 768px) and (max-width: 1020px) and (orientation: portrait) {
+    .post-thumbnail img {
+        width: 100%;
+    }
+
+    .loop-page,
+    .entry-content {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    .contact-left p {
+        display: none;
+    }
+
+    .contact-right input,
+    textarea {
+        width: 220px;
+    }
+
+    .contact-right input {
+        height: 30px;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .bio p {
+        width: 100%;
+        margin-bottom: 100px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .portfolio-gallery {
+        margin-top: 80px;
+    }
+
+    .envira-gallery-image img {
+        width: 300px;
+    }
+}
